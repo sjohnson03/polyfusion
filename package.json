@@ -1,0 +1,39 @@
+{
+  "name": "mockup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server-dependencies": "npm install --prefix server",
+    "client-dependencies": "npm install --prefix client",
+    "install-all-deps": "concurrently \"npm run server-dependencies\" \"npm run client-dependencies\"",
+    "server": "npx ts-node index.ts --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "mocha --recursive 'test/**/*.test.js'",
+    "predeploy": "npm run build-3d --prefix client",
+    "deploy": "gh-pages -d client/dist/3d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "dat.gui": "^0.7.9",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "three": "^0.165.0",
+    "ts-node": "^10.9.2",
+    "vite": "^5.4.8"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "chai-http": "^5.0.0",
+    "gh-pages": "^6.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mocha": "^10.7.3",
+    "supertest": "^7.0.0"
+  }
+}
