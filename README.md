@@ -9,6 +9,8 @@ JavaScript, TypeScript, Express.js, Node.js, three.js
 three.js is the tool used for all the 3D functionality
 
 # Get started
+Polyfusion is available to use at https://polyfusion.onrender.com/3d
+
 
 ### Setup
 Once the repository has been cloned we need to setup the node environment.
